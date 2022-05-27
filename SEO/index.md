@@ -9,6 +9,7 @@
 
 **总体提升了14%，超出竞争对手26%。**仍然遗留了些许问题，由于项目在重构，后续优化将在重构后的站点上进行。
 
+[google search seo doc](https://developers.google.com/search/docs/basics/get-started)
 
 ## seo优化历程
 
@@ -50,3 +51,31 @@
   </url>
 </urlset>
 ```
+
+### 字体加载`font-display`
+
+`css`中使用`font-display: swap;`，字体文件未加载前显示系统字体，加载完后切换为web字体。
+
+### 网页`TDK`
+- title
+- keyword
+- description
+**为了防止重复而降低评分，可以加料唯一值，例如商品编号**
+
+### 结构化数据 
+结构化数据是网页中一段固定格式的字符串，是个网页内容的元数据。搜索引擎通过结构化数据可以更好的理解页面内容，在搜索结果中，以富媒体方式展示搜索内容。
+使用方式：
+``` html
+  <head>
+    <title>Executive Anvil</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      ...
+    }
+    </script>
+  </head>
+```
+具体配置见文档 [google search seo doc](https://developers.google.com/search/docs/basics/get-started)
+
