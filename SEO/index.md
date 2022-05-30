@@ -57,10 +57,13 @@
 `css`中使用`font-display: swap;`，字体文件未加载前显示系统字体，加载完后切换为web字体。
 
 ### 网页`TDK`
-- title
-- keyword
-- description
-**为了防止重复而降低评分，可以加料唯一值，例如商品编号**
+- `title`: 50字左右
+- `keyword`: 
+- `description` 150字左右
+
+根据首页，分类页，产品页做不同的设计。
+
+**动态参数网页可以加料唯一值，例如商品编号，以防重复信息而降低评分**
 
 ### 结构化数据 
 结构化数据是网页中一段固定格式的字符串，是个网页内容的元数据。搜索引擎通过结构化数据可以更好的理解页面内容，在搜索结果中，以富媒体方式展示搜索内容。
@@ -79,3 +82,43 @@
 ```
 具体配置见文档 [google search seo doc](https://developers.google.com/search/docs/basics/get-started)
 
+### `<img>`标签添加`alt`属性
+`Alternative text`（替代文本），是HTML代码中用于描述页面上图像外观的介绍。
+- 提高页面页面内容的可读性
+- 提高页面主关键词相关度
+- 可以在`Google Image`里面增加曝光和展示
+- `Google`将`Alt`视为图片锚文本，谷歌通过锚文本内容去理解链接到的页面内容
+- 给图片定义`width`和`height`可以有效提升性能
+
+### `<a>`标签添加`rel="nofollow"`
+告诉搜索引擎，不要追踪此网页上的链接。一般用于：
+- 屏蔽站点不重要链接，例如广告等等。
+- 不可信赖的用户进行的评论、留言。
+
+### `rel="canonical"`
+为类似网页或重复网页指定权威网页。目的：
+- 指定您希望用户在搜索结果中看到的网址
+- 整合类似网页或重复网页的链接信号
+- 避免花费时间抓取重复网页
+
+### 简单的网址结构
+1.使用简单、说明性字词；避免不易读的、冗长的 ID 编号。
+  - <span style="color: #34a853">*/coffee/latte</span>
+  - <span style="color: #dd2c00">*/index.php?id_sezione=360&sid=3a5ebc944f41daa6f849f730f1</span>
+
+2.网址中的关键字用连字符分隔开
+  - <span style="color: #34a853">*/green-dress</span>
+  - <span style="color: #dd2c00">*/greendress</span>
+
+3.使用连接线 `-`，避免使用下划线 `_`
+  - <span style="color: #34a853">*/summer-clothing/filter?color=dark-grey</span>
+  - <span style="color: #dd2c00">*/summer_clothing/filter?color=dark_grey</span>
+
+### 确认链接可抓取
+- 建议
+  - `<a href="https://example.com">`
+  - `<a href="/relative/path/file">`
+
+- 不建议
+  - `<a routerLink="some/path">`
+  - `<a onclick="goto('https://example.com')">`
